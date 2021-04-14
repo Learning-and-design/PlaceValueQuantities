@@ -1,1 +1,4 @@
 # PlaceValueQuantities
+
+This is an e-learning game intended to teach childeren basics of Mathematics i.e Unit, Tens and Hundered.
+Click this link to play the game https://kreedo-education.github.io/PlaceValueQuantities/
