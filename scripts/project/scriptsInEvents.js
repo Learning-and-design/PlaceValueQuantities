@@ -20,22 +20,12 @@ export class AppInterface  {
 
 		async Egame_Event1_Act7(runtime, localVars)
 		{
-			// localStorage.clear();
+			localStorage.clear();
 			if(localStorage.getItem(runtime.globalVars.GameID+"_"+runtime.globalVars.ChildID)===null){
-			// if(!runtime.globalVars.PresentationDone){
-			// 		runtime.goToLayout("Tutorial");
-			// 		return;
-			// 	}
-			// 	for(let i=1; i<=4 ;i++){
-			// 		if(!eval("runtime.globalVars.L"+i+"TutorialDone")){
-			// 			runtime.goToLayout("Level"+i+"_Tutorial");
-			// 			return;
-			// 		}
-			// 		else if(!eval("runtime.globalVars.L"+i+"_Completed")){
-			// 			runtime.goToLayout("Level"+i);
-			// 		}
-			// 	}
-			// 	console.log("Hellllllllllllllllllllllllloo",runtime.globalVars.L4_Completed);
+			//  runtime.globalVars.CurrentLevel = 4;
+			// runtime.globalVars.L4TutorialDone = 1;
+			// runtime.goToLayout("Level"+runtime.globalVars.CurrentLevel );
+			// return;
 			
 			runtime.goToLayout("Tutorial");
 			}
@@ -134,7 +124,7 @@ export class AppInterface  {
 			AppInterface.sendToApp(data);
 		},
 
-		async Egame_Event19_Act1(runtime, localVars)
+		async Egame_Event20_Act1(runtime, localVars)
 		{
 			
 		},

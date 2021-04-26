@@ -5225,19 +5225,36 @@ bbox.getBottom();this._isEnabled=true;this._StartTicking()}}}};
 		C3.Plugins.System.Exps.random,
 		C3.Plugins.Arr.Exps.At,
 		C3.Plugins.Arr.Acts.SetX,
-		C3.ScriptsInEvents.Egame_Event19_Act1,
+		C3.ScriptsInEvents.Egame_Event20_Act1,
 		C3.Plugins.System.Cnds.While,
 		C3.Plugins.System.Acts.AddVar,
 		C3.Plugins.System.Acts.SetFunctionReturnValue,
+		C3.Plugins.System.Acts.Wait,
+		C3.Plugins.System.Acts.CreateObject,
+		C3.Plugins.Sprite.Exps.X,
+		C3.Plugins.Sprite.Exps.Y,
+		C3.Behaviors.Pin.Acts.PinByProperties,
+		C3.Plugins.Text.Acts.SetOpacity,
+		C3.Plugins.Sprite.Acts.SetSize,
+		C3.Plugins.Sprite.Acts.SetVisible,
+		C3.Behaviors.Tween.Acts.TweenTwoProperties,
+		C3.Behaviors.Tween.Acts.TweenOneProperty,
+		C3.Behaviors.Fade.Acts.SetFadeInTime,
+		C3.Behaviors.Fade.Acts.SetFadeOutTime,
+		C3.Behaviors.Fade.Acts.SetWaitTime,
+		C3.Behaviors.Fade.Acts.RestartFade,
+		C3.Plugins.Sprite.Acts.StartAnim,
+		C3.Plugins.Sprite.Acts.MoveToLayer,
+		C3.Plugins.Sprite.Acts.MoveToTop,
+		C3.Plugins.System.Cnds.ForEach,
+		C3.Plugins.Sprite.Cnds.IsBoolInstanceVarSet,
 		C3.Plugins.System.Cnds.IsGroupActive,
 		C3.Plugins.Touch.Cnds.OnTapGestureObject,
-		C3.Plugins.Sprite.Cnds.IsBoolInstanceVarSet,
 		C3.Plugins.System.Acts.SetBoolVar,
 		C3.Plugins.Sprite.Acts.SetOpacity,
-		C3.Plugins.System.Acts.CreateObject,
+		C3.Plugins.Sprite.Acts.SetAnim,
 		C3.Plugins.System.Acts.SaveState,
 		C3.Plugins.System.Acts.GoToLayoutByName,
-		C3.Plugins.Sprite.Acts.MoveToTop,
 		C3.Plugins.System.Cnds.Compare,
 		C3.Plugins.System.Exps.find,
 		C3.Plugins.System.Exps.layoutname,
@@ -5246,12 +5263,10 @@ bbox.getBottom();this._isEnabled=true;this._StartTicking()}}}};
 		C3.Plugins.System.Cnds.Every,
 		C3.Plugins.System.Cnds.TriggerOnce,
 		C3.Plugins.Touch.Cnds.OnTouchStart,
-		C3.Plugins.System.Cnds.CompareBetween,
-		C3.Plugins.Sprite.Cnds.IsVisible,
+		C3.Plugins.Touch.Cnds.OnTouchEnd,
+		C3.Plugins.Browser.Cnds.IsFullscreen,
 		C3.Plugins.Text.Acts.SetText,
-		C3.Behaviors.Tween.Acts.TweenOneProperty,
 		C3.Plugins.Browser.Exps.ExecJS,
-		C3.Plugins.System.Acts.Wait,
 		C3.Plugins.Audio.Cnds.OnEnded,
 		C3.ScriptsInEvents.Etutorial_Event4_Act2,
 		C3.Plugins.System.Acts.RestartLayout,
@@ -5260,11 +5275,8 @@ bbox.getBottom();this._isEnabled=true;this._StartTicking()}}}};
 		C3.Plugins.Sprite.Cnds.IsOnScreen,
 		C3.Behaviors.DragnDrop.Acts.Drop,
 		C3.Behaviors.DragnDrop.Cnds.OnDrop,
-		C3.Plugins.Sprite.Acts.SetAnim,
 		C3.Plugins.Sprite.Cnds.IsOverlapping,
 		C3.Plugins.Sprite.Cnds.CompareInstanceVar,
-		C3.Plugins.Sprite.Exps.X,
-		C3.Plugins.Sprite.Exps.Y,
 		C3.Plugins.Sprite.Acts.MoveToBottom,
 		C3.Plugins.Sprite.Acts.ZMoveToObject,
 		C3.Plugins.Sprite.Acts.AddInstanceVar,
@@ -5272,16 +5284,11 @@ bbox.getBottom();this._isEnabled=true;this._StartTicking()}}}};
 		C3.Plugins.System.Acts.CreateObjectByName,
 		C3.Plugins.System.Cnds.PickLastCreated,
 		C3.Plugins.Sprite.Acts.SetInstanceVar,
-		C3.Plugins.Sprite.Acts.SetVisible,
 		C3.Plugins.System.Cnds.PickAll,
 		C3.Plugins.System.Acts.WaitForPreviousActions,
-		C3.Plugins.Sprite.Acts.StartAnim,
-		C3.Behaviors.Tween.Acts.TweenTwoProperties,
-		C3.Behaviors.Pin.Acts.PinByProperties,
 		C3.Plugins.Sprite.Exps.Width,
 		C3.Plugins.Sprite.Acts.SetScale,
 		C3.Plugins.System.Cnds.PickByComparison,
-		C3.Plugins.Sprite.Acts.MoveToLayer,
 		C3.Behaviors.Pin.Acts.PinByImagePoint,
 		C3.Behaviors.Tween.Acts.StopAllTweens,
 		C3.Plugins.System.Exps.int,
@@ -5294,12 +5301,8 @@ bbox.getBottom();this._isEnabled=true;this._StartTicking()}}}};
 		C3.Plugins.Arr.Exps.UID,
 		C3.Plugins.System.Cnds.Repeat,
 		C3.Plugins.Arr.Acts.Delete,
-		C3.Plugins.Text.Acts.SetOpacity,
-		C3.Plugins.Sprite.Acts.SetSize,
-		C3.Behaviors.Fade.Acts.SetFadeInTime,
-		C3.Behaviors.Fade.Acts.SetFadeOutTime,
-		C3.Behaviors.Fade.Acts.SetWaitTime,
-		C3.Behaviors.Fade.Acts.RestartFade,
+		C3.Plugins.Touch.Cnds.OnTouchObject,
+		C3.Plugins.System.Exps.timescale,
 		C3.Plugins.Sprite.Acts.StopAnim,
 		C3.Behaviors.Fade.Acts.StartFade,
 		C3.Plugins.Text.Acts.Destroy,
@@ -5312,22 +5315,22 @@ bbox.getBottom();this._isEnabled=true;this._StartTicking()}}}};
 		C3.Plugins.System.Exps.choose,
 		C3.Plugins.System.Acts.SubVar,
 		C3.Plugins.System.Cnds.PickRandom,
-		C3.Behaviors.Tween.Acts.StopTweens,
 		C3.Plugins.Sprite.Acts.SetEffectEnabled,
 		C3.Plugins.Sprite.Acts.SetX,
 		C3.Plugins.Sprite.Acts.SetPosToObject,
 		C3.Behaviors.Pin.Cnds.IsPinned,
 		C3.Behaviors.Tween.Cnds.IsAnyPlaying,
+		C3.Plugins.Arr.Acts.Clear,
+		C3.Plugins.Arr.Cnds.CompareX,
 		C3.Plugins.Audio.Acts.Play,
+		C3.Behaviors.DragnDrop.Cnds.OnDragStart,
+		C3.Plugins.Touch.Exps.X,
+		C3.Plugins.Touch.Exps.Y,
 		C3.Plugins.Arr.Acts.Pop,
 		C3.Plugins.Sprite.Cnds.CompareY,
-		C3.Plugins.System.Cnds.ForEach,
 		C3.Plugins.Arr.Acts.Push,
 		C3.Plugins.Arr.Acts.Sort,
 		C3.Plugins.Sprite.Acts.SubInstanceVar,
-		C3.Behaviors.DragnDrop.Cnds.OnDragStart,
-		C3.Plugins.Arr.Cnds.CompareX,
-		C3.Plugins.Arr.Acts.Clear,
 		C3.Plugins.Timeline.Acts.PlayTimeline
 		];
 	};
@@ -5390,13 +5393,15 @@ bbox.getBottom();this._isEnabled=true;this._StartTicking()}}}};
 		{Speech_Bubble: 0},
 		{bg: 0},
 		{bg_cityscape: 0},
-		{UnitCount: 0},
-		{TensCount: 0},
-		{HundredCounts: 0},
+		{Units: 0},
+		{Tens: 0},
+		{Hundreds: 0},
 		{QuantityType: 0},
 		{QunatityCount: 0},
 		{Counter: 0},
 		{IncorrectCounter: 0},
+		{QunatitiesValue: 0},
+		{CurrentQuantity: 0},
 		{StoreroomBG: 0},
 		{Trolley: 0},
 		{Index: 0},
@@ -5406,14 +5411,10 @@ bbox.getBottom();this._isEnabled=true;this._StartTicking()}}}};
 		{"100sHitArea": 0},
 		{"10sHitArea": 0},
 		{"1sHitArea": 0},
-		{L2Quantities: 0},
+		{L2QuantitiesArray: 0},
 		{TempArr: 0},
+		{L2AudioArray: 0},
 		{L3QunatitiesArray: 0},
-		{CurrentQuantity: 0},
-		{Units: 0},
-		{Tens: 0},
-		{Hundreds: 0},
-		{QunatitiesValue: 0},
 		{CurrentIndex: 0},
 		{L3_BG: 0},
 		{Reck: 0},
@@ -5435,6 +5436,9 @@ bbox.getBottom();this._isEnabled=true;this._StartTicking()}}}};
 		{Horizontal_Line: 0},
 		{isIdentified: 0},
 		{NextScale: 0},
+		{LastX: 0},
+		{LastY: 0},
+		{isDrag: 0},
 		{"100s": 0},
 		{"10s": 0},
 		{"1s": 0},
@@ -5462,6 +5466,7 @@ bbox.getBottom();this._isEnabled=true;this._StartTicking()}}}};
 		{Left_Side_Platform: 0},
 		{Timeline: 0},
 		{LocalStorage: 0},
+		{quantity_hitarea: 0},
 		{Buttons: 0},
 		{DragDrop: 0},
 		{qunatities: 0},
@@ -5571,6 +5576,7 @@ bbox.getBottom();this._isEnabled=true;this._StartTicking()}}}};
 		{qunatitiesIdentified: 0},
 		{UnitCounts: 0},
 		{TenCounts: 0},
+		{HundredCounts: 0},
 		{enable: 0},
 		{"1sCount": 0},
 		{"10sCount": 0},
@@ -5581,11 +5587,13 @@ bbox.getBottom();this._isEnabled=true;this._StartTicking()}}}};
 		{randomQunatity: 0},
 		{quantity: 0},
 		{L2CanLevelUp: 0},
-		{AudioName: 0},
-		{L3CanLevelUp: 0},
+		{tempQuantity: 0},
+		{tempAudio: 0},
+		{qunatity_value: 0},
 		{firstItem: 0},
 		{times: 0},
-		{qunatity_value: 0},
+		{AudioName: 0},
+		{L3CanLevelUp: 0},
 		{audio_name: 0},
 		{Direction: 0},
 		{L4CanLevelUp: 0}
@@ -5767,12 +5775,38 @@ bbox.getBottom();this._isEnabled=true;this._StartTicking()}}}};
 			const v0 = p._GetNode(0).GetVar();
 			return () => (v0.GetValue() / 10);
 		},
+		() => 2,
+		() => "LevelCompletionSound",
+		() => 427,
+		() => 240,
+		p => {
+			const n0 = p._GetNode(0);
+			return () => n0.ExpObject();
+		},
+		p => {
+			const n0 = p._GetNode(0);
+			return () => (n0.ExpObject() + 50);
+		},
+		() => "pop",
+		() => 238,
+		() => 1.5,
+		() => "opacity",
+		() => 100,
+		() => 0.3,
+		() => 3,
+		p => {
+			const v0 = p._GetNode(0).GetVar();
+			const v1 = p._GetNode(1).GetVar();
+			const v2 = p._GetNode(2).GetVar();
+			return () => ((v0.GetValue() + (10 * v1.GetValue())) + (100 * v2.GetValue()));
+		},
 		() => 50,
 		() => "GlobalButtons",
 		p => {
 			const v0 = p._GetNode(0).GetVar();
 			return () => (v0.GetValue() - 150);
 		},
+		() => "Green",
 		p => {
 			const v0 = p._GetNode(0).GetVar();
 			return () => (v0.GetValue() + 150);
@@ -5792,9 +5826,7 @@ bbox.getBottom();this._isEnabled=true;this._StartTicking()}}}};
 			const v0 = p._GetNode(0).GetVar();
 			return () => (and("Level", v0.GetValue()) + "_Tutorial");
 		},
-		() => 2,
 		() => "L2HintSave",
-		() => 3,
 		() => "L3HintSave",
 		() => 4,
 		() => "L4HintSave",
@@ -5826,34 +5858,6 @@ bbox.getBottom();this._isEnabled=true;this._StartTicking()}}}};
 		() => 19,
 		() => -5,
 		() => 15,
-		p => {
-			const v0 = p._GetNode(0).GetVar();
-			return () => (v0.GetValue() + 35);
-		},
-		p => {
-			const v0 = p._GetNode(0).GetVar();
-			return () => (v0.GetValue() - 50);
-		},
-		p => {
-			const v0 = p._GetNode(0).GetVar();
-			return () => (v0.GetValue() + 95);
-		},
-		p => {
-			const v0 = p._GetNode(0).GetVar();
-			return () => (v0.GetValue() - 92);
-		},
-		p => {
-			const v0 = p._GetNode(0).GetVar();
-			return () => (v0.GetValue() + 118);
-		},
-		p => {
-			const v0 = p._GetNode(0).GetVar();
-			return () => (v0.GetValue() - 35);
-		},
-		p => {
-			const v0 = p._GetNode(0).GetVar();
-			return () => (v0.GetValue() + 115);
-		},
 		() => "L1TutorialPlay",
 		p => {
 			const v0 = p._GetNode(0).GetVar();
@@ -5897,10 +5901,6 @@ bbox.getBottom();this._isEnabled=true;this._StartTicking()}}}};
 		},
 		p => {
 			const n0 = p._GetNode(0);
-			return () => n0.ExpObject();
-		},
-		p => {
-			const n0 = p._GetNode(0);
 			const n1 = p._GetNode(1);
 			const v2 = p._GetNode(2).GetVar();
 			return () => (and("PVQ_A_L0_", (n0.ExpInstVar_Family() + n1.ExpInstVar_Family())) + v2.GetValue());
@@ -5920,7 +5920,6 @@ bbox.getBottom();this._isEnabled=true;this._StartTicking()}}}};
 			return () => (and("", n0.ExpInstVar_Family()) + "s");
 		},
 		() => "Tutorial",
-		() => 100,
 		() => "DragDropAnim",
 		p => {
 			const v0 = p._GetNode(0).GetVar();
@@ -5975,7 +5974,6 @@ bbox.getBottom();this._isEnabled=true;this._StartTicking()}}}};
 		() => "VB_A_L0_4",
 		() => "Confetti",
 		() => 316,
-		() => 240,
 		() => 520,
 		p => {
 			const v0 = p._GetNode(0).GetVar();
@@ -6000,12 +5998,7 @@ bbox.getBottom();this._isEnabled=true;this._StartTicking()}}}};
 			const v0 = p._GetNode(0).GetVar();
 			return () => (v0.GetValue() - 115);
 		},
-		p => {
-			const v0 = p._GetNode(0).GetVar();
-			return () => (v0.GetValue() - 45);
-		},
 		() => 0.45,
-		() => 1.5,
 		p => {
 			const v0 = p._GetNode(0).GetVar();
 			return () => ("PVQ_A_L0_3" + v0.GetValue());
@@ -6089,8 +6082,6 @@ bbox.getBottom();this._isEnabled=true;this._StartTicking()}}}};
 		() => "L1Buttons",
 		() => "L1GamePlay",
 		() => "L1Functions",
-		() => 35,
-		() => 440,
 		() => 6,
 		p => {
 			const v0 = p._GetNode(0).GetVar();
@@ -6156,19 +6147,6 @@ bbox.getBottom();this._isEnabled=true;this._StartTicking()}}}};
 			return () => ("PVQ_A_L1_6" + v0.GetValue());
 		},
 		() => "PVQ_A_L1_6",
-		() => 90,
-		() => 0.01,
-		() => 0.4,
-		() => "LevelCompletionSound",
-		() => 427,
-		p => {
-			const n0 = p._GetNode(0);
-			return () => (n0.ExpObject() + 50);
-		},
-		() => "pop",
-		() => 238,
-		() => "opacity",
-		() => 0.3,
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
 			const v1 = p._GetNode(1).GetVar();
@@ -6263,6 +6241,7 @@ bbox.getBottom();this._isEnabled=true;this._StartTicking()}}}};
 			const v1 = p._GetNode(1).GetVar();
 			return () => ((v0.GetValue() + 110) + (v1.GetValue() * 60));
 		},
+		() => 0.01,
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
 			return () => (f0() % 3);
@@ -6272,13 +6251,20 @@ bbox.getBottom();this._isEnabled=true;this._StartTicking()}}}};
 			return () => ("PVQ_A_L1_3" + v0.GetValue());
 		},
 		() => "PVQ_A_L1_3",
+		() => 0.4,
 		p => {
 			const v0 = p._GetNode(0).GetVar();
 			return () => ("PVQ_A_L1_7" + v0.GetValue());
 		},
 		() => "PVQ_A_L1_7",
-		() => "loop",
-		() => 0.9,
+		p => {
+			const v0 = p._GetNode(0).GetVar();
+			return () => (v0.GetValue() + 95);
+		},
+		p => {
+			const v0 = p._GetNode(0).GetVar();
+			return () => (v0.GetValue() - 35);
+		},
 		p => {
 			const v0 = p._GetNode(0).GetVar();
 			return () => ("GL_A_19" + v0.GetValue());
@@ -6364,13 +6350,13 @@ bbox.getBottom();this._isEnabled=true;this._StartTicking()}}}};
 		() => "PVQ_A_L2_55",
 		() => "100s",
 		() => "out1",
-		() => 435,
 		() => "L2TutorialMusicPlayBack",
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
 			return () => and("PVQ_A_L2_", f0());
 		},
 		() => "in",
+		() => "L2GamePlay",
 		p => {
 			const v0 = p._GetNode(0).GetVar();
 			const n1 = p._GetNode(1);
@@ -6382,48 +6368,76 @@ bbox.getBottom();this._isEnabled=true;this._StartTicking()}}}};
 			const v0 = p._GetNode(0).GetVar();
 			return () => and(v0.GetValue(), "");
 		},
+		() => 60,
+		() => 70,
+		() => 30,
+		() => 900,
+		() => 400,
+		() => "PVQ_A_L2_33",
+		() => "PVQ_A_L2_48",
+		() => "PVQ_A_L2_45",
+		() => "PVQ_A_L2_60",
+		() => "PVQ_A_L2_34",
+		() => "Up",
+		p => {
+			const n0 = p._GetNode(0);
+			return () => n0.ExpInstVar();
+		},
+		p => {
+			const n0 = p._GetNode(0);
+			const v1 = p._GetNode(1).GetVar();
+			const v2 = p._GetNode(2).GetVar();
+			return () => and(n0.ExpObject(v1.GetValue()), v2.GetValue());
+		},
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
 			return () => (f0() + 1);
 		},
-		() => "Up",
 		p => {
-			const n0 = p._GetNode(0);
+			const f0 = p._GetNode(0).GetBoundMethod();
 			const v1 = p._GetNode(1).GetVar();
-			return () => (and("PVQ_A_L2_", (33 + n0.ExpInstVar())) + v1.GetValue());
+			return () => f0((v1.GetValue() / 100));
 		},
 		p => {
-			const n0 = p._GetNode(0);
-			return () => and("PVQ_A_L2_", (33 + n0.ExpInstVar()));
+			const v0 = p._GetNode(0).GetVar();
+			return () => (v0.GetValue() % 100);
 		},
 		p => {
-			const n0 = p._GetNode(0);
+			const f0 = p._GetNode(0).GetBoundMethod();
 			const v1 = p._GetNode(1).GetVar();
-			return () => (and("PVQ_A_L2_", (42 + n0.ExpInstVar())) + v1.GetValue());
+			return () => f0((v1.GetValue() / 10));
+		},
+		p => {
+			const v0 = p._GetNode(0).GetVar();
+			return () => (v0.GetValue() % 10);
 		},
 		p => {
 			const n0 = p._GetNode(0);
-			return () => and("PVQ_A_L2_", (42 + n0.ExpInstVar()));
+			return () => n0.ExpObject(0);
 		},
 		p => {
 			const n0 = p._GetNode(0);
-			const v1 = p._GetNode(1).GetVar();
-			return () => (and("PVQ_A_L2_", (51 + n0.ExpInstVar())) + v1.GetValue());
+			return () => ((n0.ExpObject() - 1) - 1);
 		},
 		p => {
 			const n0 = p._GetNode(0);
-			return () => and("PVQ_A_L2_", (51 + n0.ExpInstVar()));
+			const f1 = p._GetNode(1).GetBoundMethod();
+			return () => n0.ExpObject((f1() + 1));
 		},
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
 			return () => (Math.floor(f0(9)) + 1);
 		},
 		() => "L2Buttons",
-		() => "L2GamePlay",
 		p => {
-			const n0 = p._GetNode(0);
+			const f0 = p._GetNode(0).GetBoundMethod();
 			const n1 = p._GetNode(1);
-			return () => (n0.ExpInstVar() * n1.ExpInstVar());
+			const v2 = p._GetNode(2).GetVar();
+			return () => and(and(f0(), ":"), n1.ExpObject(v2.GetValue()));
+		},
+		p => {
+			const v0 = p._GetNode(0).GetVar();
+			return () => ((v0.GetValue() + 1) - 4);
 		},
 		p => {
 			const v0 = p._GetNode(0).GetVar();
@@ -6433,18 +6447,9 @@ bbox.getBottom();this._isEnabled=true;this._StartTicking()}}}};
 		() => "Reposition",
 		p => {
 			const n0 = p._GetNode(0);
-			return () => n0.ExpInstVar();
-		},
-		p => {
-			const n0 = p._GetNode(0);
-			return () => (n0.ExpObject() - 2);
-		},
-		p => {
-			const n0 = p._GetNode(0);
-			return () => n0.ExpObject(0);
+			return () => (n0.ExpObject() - 4.5);
 		},
 		() => "L2MusicPlayBack",
-		() => 60,
 		() => "L2Tweens",
 		() => 250,
 		() => "Down",
@@ -6484,21 +6489,12 @@ bbox.getBottom();this._isEnabled=true;this._StartTicking()}}}};
 		() => "L3TutorialMusicPlayBack",
 		() => "L3GamePlay",
 		() => "L3TutorialSave",
-		p => {
-			const n0 = p._GetNode(0);
-			return () => (n0.ExpObject() - 4.5);
-		},
-		p => {
-			const n0 = p._GetNode(0);
-			const v1 = p._GetNode(1).GetVar();
-			const v2 = p._GetNode(2).GetVar();
-			return () => and(n0.ExpObject(v1.GetValue()), v2.GetValue());
-		},
+		() => "L3Functions",
+		() => 38,
 		p => {
 			const v0 = p._GetNode(0).GetVar();
-			return () => ((v0.GetValue() + 1) - 4);
+			return () => (v0.GetValue() - 50);
 		},
-		() => "L3Functions",
 		() => 94,
 		() => 830,
 		() => 610,
@@ -6513,39 +6509,6 @@ bbox.getBottom();this._isEnabled=true;this._StartTicking()}}}};
 		() => "PVQ_A_L3_42",
 		() => "PVQ_A_L3_39",
 		() => "PVQ_A_L3_37",
-		p => {
-			const v0 = p._GetNode(0).GetVar();
-			const v1 = p._GetNode(1).GetVar();
-			const v2 = p._GetNode(2).GetVar();
-			return () => ((v0.GetValue() + (10 * v1.GetValue())) + (100 * v2.GetValue()));
-		},
-		p => {
-			const n0 = p._GetNode(0);
-			return () => ((n0.ExpObject() - 1) - 1);
-		},
-		p => {
-			const n0 = p._GetNode(0);
-			const f1 = p._GetNode(1).GetBoundMethod();
-			return () => n0.ExpObject((f1() + 1));
-		},
-		p => {
-			const f0 = p._GetNode(0).GetBoundMethod();
-			const v1 = p._GetNode(1).GetVar();
-			return () => f0((v1.GetValue() / 100));
-		},
-		p => {
-			const v0 = p._GetNode(0).GetVar();
-			return () => (v0.GetValue() % 100);
-		},
-		p => {
-			const f0 = p._GetNode(0).GetBoundMethod();
-			const v1 = p._GetNode(1).GetVar();
-			return () => f0((v1.GetValue() / 10));
-		},
-		p => {
-			const v0 = p._GetNode(0).GetVar();
-			return () => (v0.GetValue() % 10);
-		},
 		() => "L3Buttons",
 		() => "L3Tweens",
 		() => "L3GamePlayMusicPlayBack",
