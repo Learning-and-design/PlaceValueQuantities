@@ -18,7 +18,7 @@ export class AppInterface  {
 {
 	const scriptsInEvents = {
 
-		async Egame_Event1_Act7(runtime, localVars)
+		async Egame_Event1_Act8(runtime, localVars)
 		{
 			localStorage.clear();
 			if(localStorage.getItem(runtime.globalVars.GameID+"_"+runtime.globalVars.ChildID)===null){
