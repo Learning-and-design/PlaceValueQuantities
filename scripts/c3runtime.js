@@ -5265,6 +5265,7 @@ bbox.getBottom();this._isEnabled=true;this._StartTicking()}}}};
 		C3.Plugins.Touch.Cnds.OnTouchStart,
 		C3.Plugins.Touch.Cnds.OnTouchEnd,
 		C3.Plugins.Browser.Cnds.IsFullscreen,
+		C3.Plugins.Browser.Acts.RequestFullScreen,
 		C3.Plugins.Text.Acts.SetText,
 		C3.Plugins.Browser.Exps.ExecJS,
 		C3.Plugins.Audio.Cnds.OnEnded,
