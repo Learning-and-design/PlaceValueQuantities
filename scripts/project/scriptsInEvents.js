@@ -20,13 +20,7 @@ export class AppInterface  {
 
 		async Egame_Event1_Act8(runtime, localVars)
 		{
-			localStorage.clear();
 			if(localStorage.getItem(runtime.globalVars.GameID+"_"+runtime.globalVars.ChildID)===null){
-			//  runtime.globalVars.CurrentLevel = 4;
-			// runtime.globalVars.L4TutorialDone = 1;
-			// runtime.goToLayout("Level"+runtime.globalVars.CurrentLevel );
-			// return;
-			
 			runtime.goToLayout("Tutorial");
 			}
 			
