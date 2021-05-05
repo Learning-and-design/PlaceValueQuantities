@@ -9,10 +9,10 @@ This is a two way communication [App to Game  & Game to App].
 
 Following things need to be taken care to achieve our data capture properly:-
 
-1. The data format used for communication will be JSON.
-2. Initial data fields will be coming from app to start the game.
-3. The game will accept this data and then initialize game's varibale with the data recieved.
-4. The game will have to send the data to app each time the game make any progress/update.
+1. Data Format
+2. Data Listeners
+3. Initialize the Game's Varibales.
+4. Send the data to app.
 
 There are two types of game's builds avilable for now: - 
 1. Unity Build 
@@ -28,55 +28,56 @@ There are two types of game's builds avilable for now: -
  3. Add an event listener to listen for the data coming from app's webview.
  4. Create two javascript functions in the index.html to SendDataToUnity and to GetDataFromUnity.
 
-Now come our tasks:
+Now come to our tasks:
 ### Data Format ###
   The app will send the data in the JSOn format.
   This is sample data format:-
- ``` {
+ ``` 
+ {
    "data":{
-      "GameName":"Place VAlue Quantities",
-      "GameID":"GL_PVQ",
-      "ChildID":"CHILD_01",
-      "AttemptID":"ATPT_01",
-      "RewardPoints":0,
+      "gameName":"Place VAlue Quantities",
+      "gameId":"GL_PVQ",
+      "childId":"CHILD_01",
+      "attemptId":"ATPT_01",
+      "rewardPoints":0,
       "isMusic":1,
-      "Level0":{
-         "Completed":0,
-         "StartTime":"Wed May 05 2021 10:04:59 GMT+0530 (India Standard Time)",
-         "EndTime":"",
-         "PlayCount":0
+      "level0":{
+         "completed":0,
+         "startDate":"",
+         "endDate":"",
+         "playCount":0
       },
-      "Level1":{
-         "PresentationDone":0,
-         "Completed":0,
-         "PlayCount":0,
-         "CurrentPlay":0,
-         "CorrectAttempts":0,
-         "IncorrectAttempts":0
+      "level1":{
+         "presentationDone":0,
+         "completed":0,
+         "playCount":0,
+         "currentPlay":0,
+         "correctAttempts":0,
+         "incorrectAttempts":0
       },
-      "Level2":{
-         "PresentationDone":0,
-         "Completed":0,
-         "PlayCount":0,
-         "CurrentPlay":0,
-         "CorrectAttempts":0,
-         "IncorrectAttempts":0
+      "level2":{
+         "presentationDone":0,
+         "completed":0,
+         "playCount":0,
+         "currentPlay":0,
+         "correctAttempts":0,
+         "incorrectAttempts":0
       },
-      "Level3":{
-         "PresentationDone":0,
-         "Completed":0,
-         "PlayCount":0,
-         "CurrentPlay":0,
-         "CorrectAttempts":0,
-         "IncorrectAttempts":0
+      "level3":{
+         "presentationDone":0,
+         "completed":0,
+         "playCount":0,
+         "currentPlay":0,
+         "correctAttempts":0,
+         "incorrectAttempts":0
       },
-      "Level4":{
-         "PresentationDone":0,
-         "Completed":0,
-         "PlayCount":0,
-         "CurrentPlay":0,
-         "CorrectAttempts":0,
-         "IncorrectAttempts":0
+      "level4":{
+         "presentationDone":0,
+         "completed":0,
+         "playCount":0,
+         "currentPlay":0,
+         "correctAttempts":0,
+         "incorrectAttempts":0
       }
    }
 }
@@ -86,11 +87,65 @@ Now come our tasks:
 Initial data fields will be coming from app to start the game. To catch the data comming from App's webview a listener will be required.
  Add this listener in index.html file.
  ```
+ var messageData; // To stire the data arived from app
  function handleEvent(message) {
-       alert(message.data);
-   
- }
-	 
+       //alert(message.data);  
+       messageData = message.data;
+       //use this data to initialize game variables once the loading of game has finished.
+ }	 
 document.addEventListener("message", handleEvent);  
-    ```
+ ```
+
+
+### Initialize Game's Varibales ###
+The game will accept this data and then initialize game's varibale with the data recieved, Once the data has arived from app to game, we can assign those to our game varibles. 
+For this, we create an variable called messageData and a function in index.html 'sendDataToUnity(data) '
+
+```
+// Added by UBS team
+var messageData;
+// call this function to unity
+function SendDataToUnity(data) {
+	// Don't change this line.
+	gameInstance.SendMessage("Canvas","DoSomething",data);
+}
+```
+
+Call this function once game finishes the loading.
+```
+//If unity finished loading
+if (progress === 1 && !gameInstance.removeTimeout) 
+{
+	//Hide the preloader with a delay
+	gameInstance.removeTimeout = setTimeout(function() 
+	{
+		//Hide the preloader
+		preLoader.style.display = "none"		
+		SendDataToUnity(messageData);
+	}, 500);
+}
+```
+Important:  gameInstance.SendMessage("Canvas","DoSomething",data);
+:- this line will take data to Unity and then Unity code i.e C# will catch this message and initialize all varibales accordingly.
+
+
+### Send The Data To App ###
+The game will have to send the data back to the app each time the game make any progress/update.
+Before we send the data to App we need bring the updated data from game to index.html then push the data to app.
+
+1. To bring data from Unity, we create a function getDataFromUnity(data)
+2. To push data to app we write these lines  in the same function. **window.ReactNativeWebView.postMessage(arg)**
+ Code - snippet
+```
+// get data from unity Don't change name of it. 
+function GetDataFromUnity( arg )
+{
+	  console.log("called ", arg);
+	  if (window && window.ReactNativeWebView) {
+		window.ReactNativeWebView.postMessage(arg) // pushes the data to app
+	  }
+//   alert( arg );
+}
+```
+
 
