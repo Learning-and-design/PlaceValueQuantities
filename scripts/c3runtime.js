@@ -3021,6 +3021,32 @@ await this._storage.keys();await this.ScheduleTriggers(async()=>{this._keyNamesL
 'use strict';{const C3=self.C3;C3.Plugins.LocalStorage.Exps={ItemValue(){return this._lastValue},Key(){return this._currentKey},KeyCount(){return this._keyNamesList.length},KeyAt(i){i=Math.floor(i);if(i<0||i>=this._keyNamesList.length)return"";return this._keyNamesList[i]},ErrorMessage(){return this._errorMessage}}};
 
 
+'use strict';{const C3=self.C3;C3.Plugins.PlatformInfo=class PlatformInfoPlugin extends C3.SDKPluginBase{constructor(opts){super(opts)}Release(){super.Release()}}};
+
+
+'use strict';{const C3=self.C3;C3.Plugins.PlatformInfo.Type=class PlatformInfoType extends C3.SDKTypeBase{constructor(objectClass){super(objectClass)}Release(){super.Release()}OnCreate(){}}};
+
+
+'use strict';{const C3=self.C3;const DOM_COMPONENT_ID="platform-info";C3.Plugins.PlatformInfo.Instance=class PlatformInfoInstance extends C3.SDKInstanceBase{constructor(inst,properties){super(inst,DOM_COMPONENT_ID);this._screenWidth=0;this._screenHeight=0;this._windowOuterWidth=0;this._windowOuterHeight=0;this._safeAreaInset=[0,0,0,0];this._supportsWakeLock=false;this._isWakeLockActive=false;this.AddDOMMessageHandlers([["window-resize",e=>this._OnWindowResize(e)],["wake-lock-acquired",e=>this._OnWakeLockAcquired(e)],
+["wake-lock-error",e=>this._OnWakeLockError(e)],["wake-lock-released",e=>this._OnWakeLockReleased(e)]]);if(navigator.connection)navigator.connection.addEventListener("change",()=>this._OnNetworkChange());this._runtime.AddLoadPromise(this.PostToDOMAsync("get-initial-state").then(data=>{this._screenWidth=data["screenWidth"];this._screenHeight=data["screenHeight"];this._windowOuterWidth=data["windowOuterWidth"];this._windowOuterHeight=data["windowOuterHeight"];this._safeAreaInset=data["safeAreaInset"];
+this._supportsWakeLock=data["supportsWakeLock"]}))}Release(){super.Release()}_OnWindowResize(e){this._windowOuterWidth=e["windowOuterWidth"];this._windowOuterHeight=e["windowOuterHeight"];this._safeAreaInset=e["safeAreaInset"]}async _OnNetworkChange(){await this.TriggerAsync(C3.Plugins.PlatformInfo.Cnds.OnNetworkChange)}async _OnWakeLockAcquired(){this._isWakeLockActive=true;await this.TriggerAsync(C3.Plugins.PlatformInfo.Cnds.OnWakeLockAcquired)}async _OnWakeLockError(){this._isWakeLockActive=false;
+await this.TriggerAsync(C3.Plugins.PlatformInfo.Cnds.OnWakeLockError)}async _OnWakeLockReleased(){this._isWakeLockActive=false;await this.TriggerAsync(C3.Plugins.PlatformInfo.Cnds.OnWakeLockReleased)}}};
+
+
+'use strict';{const C3=self.C3;C3.Plugins.PlatformInfo.Cnds={IsOnMobile(){return C3.Platform.IsMobile},IsOnWindows(){return C3.Platform.OS==="Windows"},IsOnMacOS(){return C3.Platform.OS==="Mac OS X"},IsOnLinux(){return C3.Platform.OS==="Linux"},IsOnChromeOS(){return C3.Platform.OS==="Chrome OS"},IsOnAndroid(){return C3.Platform.OS==="Android"},IsOniOS(){return C3.Platform.OS==="iOS"},IsWebExport(){const exportType=this._runtime.GetExportType();return exportType==="html5"||exportType==="scirra-arcade"||
+exportType==="preview"||exportType==="instant-games"},IsCordovaExport(){return this._runtime.IsCordova()},IsNWjsExport(){return this._runtime.GetExportType()==="nwjs"},IsWindowsUWPExport(){return this._runtime.GetExportType()==="windows-uwp"},IsWindowsWebView2Export(){return this._runtime.GetExportType()==="windows-webview2"},OnNetworkChange(){return true},OnWakeLockAcquired(){return true},OnWakeLockError(){return true},OnWakeLockReleased(){return true},IsWakeLockActive(){return this._isWakeLockActive},
+IsWakeLockSupported(){return this._supportsWakeLock}}};
+
+
+'use strict';{const C3=self.C3;C3.Plugins.PlatformInfo.Acts={RequestWakeLock(){if(!this._supportsWakeLock)return;this._PostToDOMMaybeSync("request-wake-lock")},ReleaseWakeLock(){if(!this._supportsWakeLock)return;this._isWakeLockActive=false;this.PostToDOM("release-wake-lock")}}};
+
+
+'use strict';{const C3=self.C3;C3.Plugins.PlatformInfo.Exps={Renderer(){const renderer=this._runtime.GetWebGLRenderer();let ret="webgl"+renderer.GetWebGLVersionNumber();if(renderer.HasMajorPerformanceCaveat())ret+="-software";return ret},RendererDetail(){return this._runtime.GetWebGLRenderer().GetUnmaskedRenderer()},DevicePixelRatio(){return self.devicePixelRatio},ScreenWidth(){return this._screenWidth},ScreenHeight(){return this._screenHeight},WindowInnerWidth(){return this._runtime.GetCanvasManager().GetLastWidth()},
+WindowInnerHeight(){return this._runtime.GetCanvasManager().GetLastHeight()},WindowOuterWidth(){return this._windowOuterWidth},WindowOuterHeight(){return this._windowOuterHeight},CanvasCssWidth(){return this._runtime.GetCanvasManager().GetCssWidth()},CanvasCssHeight(){return this._runtime.GetCanvasManager().GetCssHeight()},CanvasDeviceWidth(){return this._runtime.GetCanvasManager().GetDeviceWidth()},CanvasDeviceHeight(){return this._runtime.GetCanvasManager().GetDeviceHeight()},Downlink(){if(navigator.connection)return navigator.connection["downlink"]||
+0;else return 0},DownlinkMax(){if(navigator.connection)return navigator.connection["downlinkMax"]||0;else return 0},ConnectionType(){if(navigator.connection)return navigator.connection["type"]||"unknown";else return"unknown"},ConnectionEffectiveType(){if(navigator.connection)return navigator.connection["effectiveType"]||"unknown";else return"unknown"},ConnectionRTT(){if(navigator.connection)return navigator.connection["rtt"]||0;else return 0},HardwareConcurrency(){return navigator.hardwareConcurrency||
+0},DeviceMemory(){return navigator.deviceMemory||0},SafeAreaInsetTop(){return this._safeAreaInset[0]},SafeAreaInsetRight(){return this._safeAreaInset[1]},SafeAreaInsetBottom(){return this._safeAreaInset[2]},SafeAreaInsetLeft(){return this._safeAreaInset[3]}}};
+
+
 'use strict';{const C3=self.C3;C3.Behaviors.Tween=class TweenBehavior extends C3.SDKBehaviorBase{constructor(opts){super(opts)}Release(){super.Release()}}};
 
 
@@ -5259,6 +5285,7 @@ bbox.getBottom();this._isEnabled=true;this._StartTicking()}}}};
 		C3.Behaviors.Fade,
 		C3.Plugins.Timeline,
 		C3.Plugins.LocalStorage,
+		C3.Plugins.PlatformInfo,
 		C3.Behaviors.DragnDrop,
 		C3.Behaviors.Anchor,
 		C3.Plugins.System.Cnds.OnLayoutStart,
@@ -5330,6 +5357,11 @@ bbox.getBottom();this._isEnabled=true;this._StartTicking()}}}};
 		C3.Plugins.System.Cnds.Every,
 		C3.Plugins.System.Cnds.TriggerOnce,
 		C3.Plugins.Touch.Cnds.OnTouchStart,
+		C3.Plugins.Touch.Cnds.OnTouchEnd,
+		C3.Plugins.PlatformInfo.Cnds.IsOnMobile,
+		C3.Plugins.Browser.Cnds.IsFullscreen,
+		C3.Plugins.Browser.Acts.CancelFullScreen,
+		C3.Plugins.Browser.Acts.RequestFullScreen,
 		C3.Plugins.Text.Acts.SetText,
 		C3.Plugins.Browser.Exps.ExecJS,
 		C3.Plugins.Audio.Cnds.OnEnded,
@@ -5538,6 +5570,7 @@ bbox.getBottom();this._isEnabled=true;this._StartTicking()}}}};
 		{LocalStorage: 0},
 		{quantity_hitarea: 0},
 		{JSON: 0},
+		{PlatformInfo: 0},
 		{Buttons: 0},
 		{DragDrop: 0},
 		{qunatities: 0},
