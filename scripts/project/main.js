@@ -10,11 +10,11 @@ message.data = {"learningTrackid":1,"gameId":1,"gameVersion":"string","predGameI
 var levelDetails = {"currentLevel":{"level":0,"presentationCompleted":0},"level0":{"presentation":{"completed":0,"playCount":0,"completedCount":0,"timeSpent":0}},"level1":{"presentation":{"completed":0,"playCount":0,"completedCount":0,"timeSpent":0},"completed":0,"playCount":0,"completedCount":0,"timeSpent":0,"correctAttempts":0,"incorrectAttempts":0},"level2":{"presentation":{"completed":0,"playCount":0,"completedCount":0,"timeSpent":0},"completed":0,"playCount":0,"completedCount":0,"timeSpent":0,"correctAttempts":0,"incorrectAttempts":0},"level3":{"presentation":{"completed":0,"playCount":0,"completedCount":0,"timeSpent":0},"completed":0,"playCount":0,"completedCount":0,"timeSpent":0,"correctAttempts":0,"incorrectAttempts":0},"level4":{"presentation":{"completed":0,"playCount":0,"completedCount":0,"timeSpent":0},"completed":0,"playCount":0,"completedCount":0,"timeSpent":0,"correctAttempts":0,"incorrectAttempts":0}}
 
 //uncomment this block to mimic the data comming from app
-// handleEvent(message);
+handleEvent(message);
 
 //app will trigger this event on load finish.
 // comment this listener if testing without app
-document.addEventListener("message", handleEvent);
+// document.addEventListener("message", handleEvent);
 
 function handleEvent(message) {	
 	messageData =  message.data;	
