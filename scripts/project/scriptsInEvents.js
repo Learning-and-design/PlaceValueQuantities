@@ -44,15 +44,19 @@ export class AppInterface  {
 			AppInterface.sendToApp(runtime.getInstanceByUid(486).getJsonDataCopy());
 		},
 
-		async Egame_Event12_Act5(runtime, localVars)
-		{
-			localStorage.setItem("pvq-data", JSON.stringify(runtime.getInstanceByUid(486).getJsonDataCopy()));
-			AppInterface.sendToApp(runtime.getInstanceByUid(488).getJsonDataCopy())
-		},
-
-		async Egame_Event34_Act1(runtime, localVars)
+		async Egame_Event33_Act1(runtime, localVars)
 		{
 			
+		},
+
+		async Ehud_Event79_Act4(runtime, localVars)
+		{
+			AppInterface.sendToApp(runtime.getInstanceByUid(488).getJsonDataCopy());
+		},
+
+		async Ehud_Event80_Act2(runtime, localVars)
+		{
+			localStorage.setItem("pvq-data", JSON.stringify(runtime.getInstanceByUid(486).getJsonDataCopy()));
 		},
 
 		async Etutorial_Event4_Act4(runtime, localVars)
@@ -75,14 +79,6 @@ export class AppInterface  {
 			runtime.goToLayout("Level"+runtime.globalVars.GameLevel+"_Tutorial");
 			}
 			
-		},
-
-		async Elevel3_Event98_Act4(runtime, localVars)
-		{
-			
-			let isMusic = localStorage.getItem(runtime.globalVars.GameName+"_Music");
-			console.log(isMusic);
-			runtime.globalVars.isMusic = isMusic;
 		}
 
 	};
