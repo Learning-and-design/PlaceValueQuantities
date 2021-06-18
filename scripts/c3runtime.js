@@ -3489,6 +3489,9 @@ bbox.getBottom();this._isEnabled=true;this._StartTicking()}}}};
 		C3.Plugins.System.Cnds.Every,
 		C3.Plugins.System.Cnds.TriggerOnce,
 		C3.Plugins.Touch.Cnds.OnTouchStart,
+		C3.Plugins.Touch.Cnds.OnTouchEnd,
+		C3.Plugins.Browser.Cnds.IsFullscreen,
+		C3.Plugins.Browser.Acts.RequestFullScreen,
 		C3.Behaviors.Anchor.Acts.SetEnabled,
 		C3.Plugins.Json.Acts.SetJSON,
 		C3.Plugins.Json.Exps.GetAsCompactString,
@@ -3504,24 +3507,29 @@ bbox.getBottom();this._isEnabled=true;this._StartTicking()}}}};
 		C3.ScriptsInEvents.Etutorial_Event5_Act1,
 		C3.Plugins.System.Acts.RestartLayout,
 		C3.Plugins.Sprite.Acts.Destroy,
+		C3.Behaviors.DragnDrop.Cnds.OnDragStart,
+		C3.Plugins.Sprite.Cnds.CompareInstanceVar,
+		C3.Plugins.Touch.Exps.X,
+		C3.Plugins.Touch.Exps.Y,
 		C3.Behaviors.DragnDrop.Cnds.IsDragging,
 		C3.Plugins.Sprite.Cnds.IsOnScreen,
 		C3.Behaviors.DragnDrop.Acts.Drop,
 		C3.Behaviors.DragnDrop.Cnds.OnDrop,
 		C3.Plugins.Sprite.Cnds.IsOverlapping,
-		C3.Plugins.Sprite.Cnds.CompareInstanceVar,
 		C3.Plugins.Sprite.Acts.MoveToBottom,
 		C3.Plugins.Sprite.Acts.ZMoveToObject,
 		C3.Plugins.Sprite.Acts.AddInstanceVar,
 		C3.Plugins.Sprite.Acts.SetY,
+		C3.Plugins.Sprite.Acts.SetPosToObject,
 		C3.Plugins.System.Acts.CreateObjectByName,
 		C3.Plugins.System.Cnds.PickLastCreated,
 		C3.Plugins.Sprite.Acts.SetInstanceVar,
+		C3.Plugins.Sprite.Acts.SetScale,
 		C3.Plugins.System.Cnds.PickAll,
 		C3.Plugins.System.Acts.WaitForPreviousActions,
 		C3.Plugins.Sprite.Exps.Width,
-		C3.Plugins.Sprite.Acts.SetScale,
 		C3.Plugins.System.Cnds.PickByComparison,
+		C3.Plugins.Sprite.Exps.LayerName,
 		C3.Behaviors.Pin.Acts.PinByImagePoint,
 		C3.Behaviors.Tween.Acts.StopAllTweens,
 		C3.Behaviors.Pin.Acts.Unpin,
@@ -3532,9 +3540,11 @@ bbox.getBottom();this._isEnabled=true;this._StartTicking()}}}};
 		C3.Plugins.Arr.Acts.SetSize,
 		C3.Plugins.Arr.Exps.UID,
 		C3.Plugins.System.Cnds.Repeat,
+		C3.Plugins.Sprite.Acts.Spawn,
 		C3.Plugins.Arr.Acts.Delete,
 		C3.Plugins.Touch.Cnds.OnTouchObject,
 		C3.Plugins.System.Exps.timescale,
+		C3.Plugins.Sprite.Cnds.PickChildren,
 		C3.Plugins.Sprite.Acts.StopAnim,
 		C3.Behaviors.Fade.Acts.StartFade,
 		C3.Plugins.Text.Acts.Destroy,
@@ -3550,15 +3560,12 @@ bbox.getBottom();this._isEnabled=true;this._StartTicking()}}}};
 		C3.Plugins.Sprite.Acts.SetEffectEnabled,
 		C3.Plugins.Sprite.Acts.SetX,
 		C3.Behaviors.Flash.Acts.Flash,
-		C3.Plugins.Sprite.Acts.SetPosToObject,
 		C3.Behaviors.Pin.Cnds.IsPinned,
 		C3.Behaviors.Tween.Cnds.IsAnyPlaying,
 		C3.Plugins.Arr.Acts.Clear,
+		C3.Plugins.Sprite.Exps.Height,
 		C3.Plugins.Arr.Cnds.CompareX,
 		C3.Plugins.Audio.Acts.Play,
-		C3.Behaviors.DragnDrop.Cnds.OnDragStart,
-		C3.Plugins.Touch.Exps.X,
-		C3.Plugins.Touch.Exps.Y,
 		C3.Plugins.Arr.Acts.Pop,
 		C3.Plugins.Sprite.Cnds.CompareY,
 		C3.Plugins.Arr.Acts.Push,
@@ -3703,6 +3710,8 @@ bbox.getBottom();this._isEnabled=true;this._StartTicking()}}}};
 		{quantity_hitarea: 0},
 		{JSON: 0},
 		{PlatformInfo: 0},
+		{"1s_Mask": 0},
+		{"1s_Outline_Mask": 0},
 		{Buttons: 0},
 		{DragDrop: 0},
 		{qunatities: 0},
@@ -4183,6 +4192,7 @@ bbox.getBottom();this._isEnabled=true;this._StartTicking()}}}};
 		() => "levelDetails.level3.timeSpent",
 		() => "levelDetails.level3.presentation.timeSpent",
 		() => "levelDetails.level4.timeSpent",
+		() => "levelDetails.level4.presentation.timeSpent",
 		() => "home",
 		() => "gameData",
 		p => {
@@ -4328,6 +4338,9 @@ bbox.getBottom();this._isEnabled=true;this._StartTicking()}}}};
 			const v0 = p._GetNode(0).GetVar();
 			return () => (v0.GetValue() - 115);
 		},
+		() => 736,
+		() => 786,
+		() => 116,
 		() => 0.45,
 		p => {
 			const v0 = p._GetNode(0).GetVar();
@@ -4370,7 +4383,6 @@ bbox.getBottom();this._isEnabled=true;this._StartTicking()}}}};
 		},
 		() => "PVQ_A_L0_30",
 		() => 5.2,
-		() => "Foreground",
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
 			const n1 = p._GetNode(1);
@@ -4393,6 +4405,7 @@ bbox.getBottom();this._isEnabled=true;this._StartTicking()}}}};
 		},
 		() => "PVQ_A_L0_6",
 		() => 4.5,
+		() => "Foreground",
 		p => {
 			const v0 = p._GetNode(0).GetVar();
 			return () => ("PVQ_A_L0_18" + v0.GetValue());
@@ -4413,14 +4426,8 @@ bbox.getBottom();this._isEnabled=true;this._StartTicking()}}}};
 		() => "L1Buttons",
 		() => "L1GamePlay",
 		() => "L1Functions",
-		p => {
-			const n0 = p._GetNode(0);
-			return () => (n0.ExpObject() + 52);
-		},
-		p => {
-			const n0 = p._GetNode(0);
-			return () => (n0.ExpObject() - 5);
-		},
+		() => 821,
+		() => 95,
 		() => 6,
 		p => {
 			const v0 = p._GetNode(0).GetVar();
@@ -4456,6 +4463,8 @@ bbox.getBottom();this._isEnabled=true;this._StartTicking()}}}};
 			const v0 = p._GetNode(0).GetVar();
 			return () => (110 + (v0.GetValue() * 68));
 		},
+		() => 2.5,
+		() => 0.1,
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
 			return () => ((f0() + 1) % 4);
@@ -4639,7 +4648,6 @@ bbox.getBottom();this._isEnabled=true;this._StartTicking()}}}};
 			return () => ("PVQ_A_L2_90" + v0.GetValue());
 		},
 		() => "PVQ_A_L2_90",
-		() => 2.5,
 		() => 2.8,
 		p => {
 			const v0 = p._GetNode(0).GetVar();
@@ -4704,16 +4712,20 @@ bbox.getBottom();this._isEnabled=true;this._StartTicking()}}}};
 			const v0 = p._GetNode(0).GetVar();
 			return () => and(v0.GetValue(), "");
 		},
+		() => 30,
 		() => 60,
 		() => 70,
-		() => 30,
 		() => 900,
 		() => 400,
-		() => "PVQ_A_L2_33",
-		() => "PVQ_A_L2_48",
 		() => "PVQ_A_L2_45",
+		() => "PVQ_A_L2_48",
+		() => "PVQ_A_L2_33",
 		() => "PVQ_A_L2_60",
 		() => "PVQ_A_L2_34",
+		p => {
+			const n0 = p._GetNode(0);
+			return () => (n0.ExpObject() * 0.4);
+		},
 		() => "Up",
 		p => {
 			const n0 = p._GetNode(0);
@@ -4782,7 +4794,6 @@ bbox.getBottom();this._isEnabled=true;this._StartTicking()}}}};
 		},
 		() => "levelDetails.level2.completed",
 		() => "Reposition",
-		() => 0.1,
 		p => {
 			const n0 = p._GetNode(0);
 			return () => (n0.ExpObject() - 4.5);
@@ -4810,46 +4821,44 @@ bbox.getBottom();this._isEnabled=true;this._StartTicking()}}}};
 		() => 201,
 		() => "L3TutorialButtons",
 		() => "L3TutorialFunctions",
-		() => 822,
-		() => 111,
+		() => 38,
+		p => {
+			const v0 = p._GetNode(0).GetVar();
+			return () => (v0.GetValue() - 50);
+		},
+		() => 87,
+		() => 430,
 		() => 1.3,
 		p => {
 			const v0 = p._GetNode(0).GetVar();
 			return () => ("PVQ_A_L3_32" + v0.GetValue());
 		},
-		() => "PVQ_A_L3_30",
-		() => 990,
+		() => "PVQ_A_L3_37",
+		() => 306,
 		p => {
 			const v0 = p._GetNode(0).GetVar();
-			return () => ("PVQ_A_L3_58" + v0.GetValue());
+			return () => ("PVQ_A_L3_37" + v0.GetValue());
 		},
-		() => "PVQ_A_L3_58",
 		() => "levelDetails.level3.presentation.completed",
+		() => "PVQ_A_L3_58",
 		() => "L3TutorialTweens",
 		() => "L3TutorialMusicPlayBack",
 		() => "L3GamePlay",
 		() => "L3TutorialSave",
 		() => "levelDetails.level3.completed",
 		() => "L3Functions",
-		() => 38,
-		p => {
-			const v0 = p._GetNode(0).GetVar();
-			return () => (v0.GetValue() - 50);
-		},
 		() => 94,
 		() => 830,
 		() => 610,
 		() => 720,
 		() => 408,
-		() => 306,
-		() => "PVQ_A_L3_31",
 		() => "PVQ_A_L3_35",
 		() => "PVQ_A_L3_43",
+		() => "PVQ_A_L3_31",
 		() => "PVQ_A_L3_41",
 		() => "PVQ_A_L3_51",
 		() => "PVQ_A_L3_42",
 		() => "PVQ_A_L3_39",
-		() => "PVQ_A_L3_37",
 		() => "L3Buttons",
 		() => "L3Tweens",
 		() => "L3GamePlayMusicPlayBack",
@@ -4865,22 +4874,22 @@ bbox.getBottom();this._isEnabled=true;this._StartTicking()}}}};
 			return () => ("PVQ_A_L2_89" + v0.GetValue());
 		},
 		() => "PVQ_A_L2_89",
+		() => "PVQ_A_L4_41",
+		() => 721,
 		() => "PVQ_A_L4_34",
-		() => 764,
 		() => "PVQ_A_L4_30",
 		() => "L4TutorialFunctions",
-		() => 770,
-		() => 116,
 		() => "Close",
 		() => 193,
 		p => {
 			const v0 = p._GetNode(0).GetVar();
-			return () => ("PVQ_A_L4_34" + v0.GetValue());
+			return () => ("PVQ_A_L4_41" + v0.GetValue());
 		},
-		() => 930,
+		() => "PVQ_A_L4_49",
+		() => 111,
 		p => {
 			const v0 = p._GetNode(0).GetVar();
-			return () => ("PVQ_A_L4_30" + v0.GetValue());
+			return () => ("PVQ_A_L4_49" + v0.GetValue());
 		},
 		() => "levelDetails.level4.presentation.completed",
 		() => "Open",
@@ -4898,6 +4907,9 @@ bbox.getBottom();this._isEnabled=true;this._StartTicking()}}}};
 		() => "levelDetails.level4.completed",
 		() => "L4",
 		() => "L4Functions",
+		() => 770,
+		() => 930,
+		() => 764,
 		() => 483,
 		() => 841,
 		() => 346,
