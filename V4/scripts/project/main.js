@@ -8,7 +8,7 @@ function setWeb(){
 	  isWeb = false
 	}
 }
-// localStorage.clear();
+//localStorage.clear();
 let version = localStorage.getItem('pvq-version');
 if(version!="5.0.1"|| !version) {
 localStorage.clear();
