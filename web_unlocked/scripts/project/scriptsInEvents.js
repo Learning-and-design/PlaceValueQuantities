@@ -52,7 +52,7 @@ const scriptsInEvents = {
 			
 		},
 
-		async Egame_Event45_Act2(runtime, localVars)
+		async Egame_Event45_Act1(runtime, localVars)
 		{
 			localStorage.setItem("pvq-data", JSON.stringify(runtime.getInstanceByUid(486).getJsonDataCopy()));
 			console.log(runtime.getInstanceByUid(486).getJsonDataCopy())
