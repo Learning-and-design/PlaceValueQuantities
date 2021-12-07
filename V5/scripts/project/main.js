@@ -31,6 +31,7 @@ document.addEventListener("message", handleEvent);
 function handleEvent(messageTemp) {	
 	isWeb = false;
 	message =  JSON.parse(messageTemp);
+	
 }
 
 runOnStartup(async runtime =>
